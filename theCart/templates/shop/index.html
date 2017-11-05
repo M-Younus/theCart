@@ -54,19 +54,19 @@
         </section>
         <section  class="homepage-slider" id="home-slider">
             <div class="flexslider">
-                <!--<ul class="slides">-->
-                    <!--<li>-->
-                        <!--<img src="./../themes/images/carousel/banner-1.jpg" alt="" />-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<img src="./../themes/images/carousel/banner-2.jpg" alt="" />-->
-                        <!--<div class="intro">-->
-                            <!--<h1>Mid season sale</h1>-->
-                            <!--<p><span>Up to 50% Off</span></p>-->
-                            <!--<p><span>On selected items online and in stores</span></p>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                <!--</ul>-->
+                <ul class="slides">
+                    <li>
+                        <img src="{% static 'themes/images/carousel/banner-1.jpg' %}" alt="" />
+                    </li>
+                    <li>
+                        <img src="{% static 'themes/images/carousel/banner-2.jpg' %}" alt="" />
+                        <div class="intro">
+                            <h1>Mid season sale</h1>
+                            <p><span>Up to 50% Off</span></p>
+                            <p><span>On selected items online and in stores</span></p>
+                        </div>
+                    </li>
+                </ul>
             </div>			
         </section>
         <section class="header_text">
@@ -76,6 +76,7 @@
         <section class="main-content">
             <div class="row">
                 <div class="span12">
+                    {% i=0 %}
                     {% for cat in categories %}													
                     <div class="row">
                         <div class="span12">
@@ -90,7 +91,7 @@
                                     <div class="amazingcarousel-list-container">
                                         <ul class="amazingcarousel-list">
                                             {% for pro in products %}
-                                            {% if pro.category_id==cat.id %}
+                                            {% if pro.category_id == cat.id %}
                                             <li class="amazingcarousel-item">
                                                 <div class="amazingcarousel-item-container">
                                                     <div class="amazingcarousel-image">
