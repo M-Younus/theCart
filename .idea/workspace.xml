@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cddae9f-9d26-4b52-b509-868eed9062b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheCartDB.sqlite3" afterPath="$PROJECT_DIR$/TheCartDB.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/models.py" afterPath="$PROJECT_DIR$/shop/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theCart/settings.py" afterPath="$PROJECT_DIR$/theCart/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theCart/static/themes/js/jquery.scrolltotop.js" afterPath="$PROJECT_DIR$/theCart/static/themes/js/jquery.scrolltotop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theCart/templates/base.html" afterPath="$PROJECT_DIR$/theCart/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theCart/templates/shop/index.html" afterPath="$PROJECT_DIR$/theCart/templates/shop/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theCart/templates/shop/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="88" column="62" lean-forward="false" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+            <state relative-caret-position="434">
+              <caret line="96" column="185" lean-forward="false" selection-start-line="96" selection-start-column="185" selection-end-line="96" selection-end-column="185" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#li#0;n#ul#0;n#nav#0;n#div#0;n#section#0;n#div#1;n#!!top" expanded="false" />
@@ -729,8 +723,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theCart/templates/shop/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="88" column="62" lean-forward="false" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+        <state relative-caret-position="434">
+          <caret line="96" column="185" lean-forward="false" selection-start-line="96" selection-start-column="185" selection-end-line="96" selection-end-column="185" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#li#0;n#ul#0;n#nav#0;n#div#0;n#section#0;n#div#1;n#!!top" expanded="false" />

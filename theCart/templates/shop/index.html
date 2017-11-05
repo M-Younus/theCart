@@ -76,7 +76,6 @@
         <section class="main-content">
             <div class="row">
                 <div class="span12">
-                    {% i=0 %}
                     {% for cat in categories %}													
                     <div class="row">
                         <div class="span12">
@@ -86,8 +85,8 @@
                                     <a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
                                 </span>
                             </h4>
-                            <div id="amazingcarousel-container-1">
-                                <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:960px;margin:0px auto 0px;">
+                            <div id="amazingcarousel-container-{{ forloop.counter }}">
+                                <div id="amazingcarousel-{{ forloop.counter }}" style="display:none;position:relative;width:100%;max-width:960px;margin:0px auto 0px;">
                                     <div class="amazingcarousel-list-container">
                                         <ul class="amazingcarousel-list">
                                             {% for pro in products %}
@@ -95,7 +94,7 @@
                                             <li class="amazingcarousel-item">
                                                 <div class="amazingcarousel-item-container">
                                                     <div class="amazingcarousel-image">
-                                                        <a href="{{ pro.image }}" title="{{ pro.name|capfirst }}" class="html5lightbox" data-group="amazingcarousel-1">
+                                                        <a href="{{ pro.image }}" title="{{ pro.name|capfirst }}" class="html5lightbox" data-group="amazingcarousel-{{ forloop.parentloop.counter }}">
                                                             <img src="{{ pro.image }}" alt="{{ pro.name|capfirst }}" />
                                                         </a>
                                                     </div>
