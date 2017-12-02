@@ -22,6 +22,7 @@ from shop import views
 
 urlpatterns = [
     url(r'^$', views.index,name='index'),
+    url(r'^(?P<cat_id>\d+)/$', views.cat_related_products,name="cat_related_products"),
     url(r'^admin/', admin.site.urls),
 ]
 

@@ -1,0 +1,21 @@
+{% extends 'base2.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+{% for item in all_prods %}
+
+    <li class="span3">
+        <div class="product-box">
+            <span class="sale_tag"></span>
+            <a href="#"><img alt="" src="{{ item.image.url }}"></a><br/>
+            <a href="#" class="title">{{ item.name | capfirst }}</a><br/>
+            <a href="#" class="category">{{ item.category }}</a>
+            <p class="price">${{ item.price }}</p>
+        </div>
+    </li>
+
+{% endfor %}
+{% endblock %}
+
