@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import Http404
-from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from cart.forms import CartAddProductForm
 
 from shop.models import Category, Product
 
@@ -15,23 +16,31 @@ def index(request):
     })
 
 
-def cat_related_products(request,cat_id):
-    all_related_products=Product.objects.filter(category_id=cat_id).order_by('?')
+def cat_related_products(request, cat_id):
+    all_related_products = Product.objects.filter(category_id=cat_id).order_by('?')
 
-    paginator=Paginator(all_related_products,25)
+    paginator = Paginator(all_related_products, 25)
 
-    page=request.GET.get('page')
+    page = request.GET.get('page')
     try:
-        all_prods=paginator.page(page)
+        all_prods = paginator.page(page)
     except PageNotAnInteger:
-        all_prods=paginator.page(1)
+        all_prods = paginator.page(1)
     except EmptyPage:
-        all_prods=paginator.page(paginator.num_pages)
+        all_prods = paginator.page(paginator.num_pages)
 
-    context={
+    context = {
         'all_prods': all_prods,
     }
 
-    return render(request,'shop/cat_related_prods_page.html',context)
+    return render(request, 'shop/cat_related_prods_page.html', context)
 
 
+def product_detail(request, CName,Pid):
+    product = get_object_or_404(Product, id=Pid)
+    cart_product_form = CartAddProductForm()
+
+    return render(request,
+                  'shop/detail.html',
+                  {'product': product,
+                   'cart_product_form': cart_product_form})

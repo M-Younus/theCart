@@ -9,7 +9,7 @@
     <li class="span3">
         <div class="product-box">
             <span class="sale_tag"></span>
-            <a href="#"><img alt="" src="{{ item.image.url }}"></a><br/>
+            <a href="../{{ item.category }}/{{ item.id }}"><img alt="" src="{{ item.image.url }}" style="height:180px !important;width:226px !important;" ></a><br/>
             <a href="#" class="title">{{ item.name | capfirst }}</a><br/>
             <a href="#" class="category">{{ item.category }}</a>
             <p class="price">${{ item.price }}</p>
