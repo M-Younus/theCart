@@ -15,7 +15,21 @@
             <div class="account pull-right">
                 <ul class="user-menu">
                     <li><a href="#">My Account</a></li>
-                    <li><a href="/cart">Your Cart</a></li>
+                    <li>
+                        <a href="/cart">
+                            {% with total_items=cart|length %}
+                                {% if cart|length > 0 %}
+                                Your cart:
+                                    <a href="{% url "cart:cart_detail" %}">
+                                    {{ total_items }} item{{ total_items|pluralize }},
+                                    ${{ cart.get_total_price }}
+                                    </a>
+                                {% else %}
+                                Your cart is empty.
+                                {% endif %}
+                            {% endwith %}
+                        </a>
+                    </li>
                     <!--<li><a href="#">Checkout</a></li>-->
                     <li><a href="#">Login</a></li>
                 </ul>
