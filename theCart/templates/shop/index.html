@@ -15,7 +15,7 @@
             <div class="account pull-right">
                 <ul class="user-menu">
                     <li><a href="#">My Account</a></li>
-                    <li><a href="#">Your Cart</a></li>
+                    <li><a href="/cart">Your Cart</a></li>
                     <!--<li><a href="#">Checkout</a></li>-->
                     <li><a href="#">Login</a></li>
                 </ul>
@@ -85,7 +85,7 @@
                                         <li class="amazingcarousel-item">
                                             <div class="amazingcarousel-item-container">
                                                 <div class="amazingcarousel-image">
-                                                    <a href="#">
+                                                    <a href="/{{ pro.category }}/{{ pro.id }}">
                                                         <img src="{{ pro.image.url }}" style="height:180px !important;width:226px !important;" alt="{{ pro.name|capfirst }}"/>
                                                     </a>
                                                 </div>
@@ -170,7 +170,7 @@
                     <li><a href="./index.html">Homepage</a></li>
                     <li><a href="./about.html">About Us</a></li>
                     <li><a href="./contact.html">Contac Us</a></li>
-                    <li><a href="./cart.html">Your Cart</a></li>
+                    <li><a href="./cart">Your Cart</a></li>
                     <li><a href="./register.html">Login</a></li>
                 </ul>
             </div>
