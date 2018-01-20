@@ -1,6 +1,6 @@
 
 *.pyc
 
-*.xml
+.idea\*.xml
 *.pyc
 *.pyc
