@@ -19,7 +19,7 @@ def index(request):
 def cat_related_products(request, cat_id):
     all_related_products = Product.objects.filter(category_id=cat_id).order_by('?')
 
-    paginator = Paginator(all_related_products, 25)
+    paginator = Paginator(all_related_products, 6)
 
     page = request.GET.get('page')
     try:

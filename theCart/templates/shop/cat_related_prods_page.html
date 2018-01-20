@@ -19,3 +19,24 @@
 {% endfor %}
 {% endblock %}
 
+{% block pagination %}
+
+<div class="pagination pagination-small pagination-centered">
+    <span class="step-links">
+        {% if all_prods.has_previous %}
+            <a class="btn btn-info btn-xs" href="?page=1">&laquo; first</a>
+            <a class="btn btn-info btn-xs"  href="?page={{ all_prods.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ all_prods.number }} of {{ all_prods.paginator.num_pages }}.
+        </span>
+
+        {% if all_prods.has_next %}
+            <a class="btn btn-info btn-xs"  href="?page={{ all_prods.next_page_number }}">next</a>
+            <a class="btn btn-info btn-xs"  href="?page={{ all_prods.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}
