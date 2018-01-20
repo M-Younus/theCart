@@ -26,7 +26,6 @@ urlpatterns = [
     url(r'^(?P<CName>[-\w]+)/(?P<Pid>\d+)/$', views.product_detail, name='product_detail'),
     url(r'^(?P<cat_id>\d+)/$', views.cat_related_products,name="cat_related_products"),
     # hello testing comment
-    # hello testing comment
     url(r'^admin/', admin.site.urls),
 ]
 
