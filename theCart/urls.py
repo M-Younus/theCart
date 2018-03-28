@@ -17,15 +17,21 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import path,include
 
 from shop import views
 
 urlpatterns = [
-    url(r'^$', views.index,name='index'),
-    url(r'^cart/', include('cart.urls', namespace='cart')),
-    url(r'^(?P<CName>[-\w]+)/(?P<Pid>\d+)/$', views.product_detail, name='product_detail'),
-    url(r'^(?P<cat_id>\d+)/$', views.cat_related_products,name="cat_related_products"),
-    url(r'^admin/', admin.site.urls),##
+    # url(r'^$', views.index,name='index'),
+    # url(r'^cart/', include('cart.urls', namespace='cart')),
+    # url(r'^(?P<CName>[-\w]+)/(?P<Pid>\d+)/$', views.product_detail, name='product_detail'),
+    # url(r'^(?P<cat_id>\d+)/$', views.cat_related_products, name="cat_related_products"),
+    # url(r'^admin/', admin.site.urls),
+    path('', views.index,name='index'),
+    path('cart/', include('cart.urls')),
+    # # path('CName/Pid/', views.product_detail, name='product_detail'),
+    # path('cat_id/', views.cat_related_products,name="cat_related_products"),
+    # path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:

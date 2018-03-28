@@ -8,7 +8,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey(Category, related_name='products')
+    category = models.ForeignKey(Category, related_name='products',on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     image = models.ImageField(upload_to='products', blank=True)
     description = models.TextField()
